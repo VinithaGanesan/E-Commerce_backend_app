@@ -6,6 +6,7 @@ const authRouter = require("./routes/auth/authRoutes");
 const adminProductsRouter = require("./routes/admin/products-routes");
 const shopProductRoutes = require("./routes/shop/products-routes");
 const cartRoutes = require("./routes/shop/cart-routes");
+const AddressRouter = require("./routes/shop/address-routes");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -36,5 +37,6 @@ app.use("/api/auth", authRouter);
 app.use("/api/admin/products", adminProductsRouter);
 app.use("/api/shop/products", shopProductRoutes);
 app.use("/api/shop/cart", cartRoutes);
+app.use("/api/shop/address", AddressRouter);
 
 app.listen(PORT, () => console.log(`Server running on port${PORT}`));
