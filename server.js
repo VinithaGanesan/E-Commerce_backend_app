@@ -23,8 +23,7 @@ connectToDatabase();
 
 app.use(
   cors({
-    // origin: process.env.CLIENT_BASE_URL,
-    origin: "http://localhost:5173",
+    origin: process.env.CLIENT_BASE_URL,
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
